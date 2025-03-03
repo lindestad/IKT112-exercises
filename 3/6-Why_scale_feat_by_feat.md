@@ -1,0 +1,5 @@
+# Theoretical Question
+
+*Why do we scale feature by feature, e.g. with the Min-Max Feature Scaling technique? What happens if we scale all the values by the total min and the total max from all features?*
+
+When scaling features independently, you preserve the unique range and distribution of each feature. Each feature is normalized using its own minimum and maximum values, ensuring that its relative differences are maintained and that it contributes fairly to the model's learning process. If you were to scale all features using the overall minimum and maximum across the entire dataset, you would mix the ranges of different features. This can lead to several problems: some features might be squashed into a very narrow range if their values are close to the overall min or max, while others might be stretched out, losing the intrinsic information about their distribution. Ultimately, scaling feature by feature maintains the individual characteristics of each feature, whereas using a global scale could distort these characteristics and negatively impact the model's performance.
